@@ -1,0 +1,11 @@
+<div>
+    <h2>Add New URL</h2>
+    <form (ngSubmit)="addUrl()">  <div class="form-group">
+        <label for="longForm">Long URL:</label>
+        <input type="text" class="form-control" id="longForm" name="longForm" [(ngModel)]="newUrl.longForm" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add URL</button>
+    </form>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+  </div>
+  
